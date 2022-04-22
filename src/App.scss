@@ -1,0 +1,112 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.c-app {
+  max-width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &__h {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.c-button-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.c-monster-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+  gap: 2rem;
+  padding: 0;
+}
+
+.c-monster-card {
+  display: grid;
+  grid-template-rows: min-content min-content;
+  border: 1px solid #dedede;
+  position: relative;
+
+  &__title {
+    padding: 5rem;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__img {
+
+    background: var(--bgImg);
+    aspect-ratio: 4/3;
+    background-size: cover;
+  }
+
+  &__stats {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-25%);
+    text-align: center;
+  }
+}
+
+.c-monster-card-stats {
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+
+  &__item {
+    background: rgb(200, 200, 200);
+    padding: .5rem;
+    text-align: center;
+    border-radius: 3rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+
+    &.is-inverted {
+      flex-direction: column-reverse;
+    }
+
+  }
+
+
+  &__label {
+
+  }
+}
+
+.c-side-window {
+  display: flex;
+  flex-direction: column;
+  
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 300px;
+
+  background-color: lightpink;
+}
+
+.c-nav{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}

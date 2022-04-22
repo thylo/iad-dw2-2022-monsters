@@ -1,0 +1,48 @@
+﻿{
+  "users": [
+    {
+      "id": 0,
+      "name": "Matis",
+      "imageUrl": "https://www.proeco.iad-arts.be/proeco/PROECO_PHOTO/4797.JPG"
+    },
+    {
+      "id": 1,
+      "name": "Robin",
+      "imageUrl": "https://www.proeco.iad-arts.be/proeco/PROECO_PHOTO/737.JPG"
+    }
+  ],
+  "monsters": [
+    {
+      "id": 0,
+      "name": "Mythro",
+      "created_by": "0",
+      "health": 10,
+      "hit": 10,
+      "imageUrl": "https://cg2.cgsociety.org/uploads/images/medium/danistormborn-orc-warrior-1-2907bf52-1qwv.jpg"
+    },
+    {
+      "id": 1,
+      "name": "Syren",
+      "created_by": "1",
+      "health": 19,
+      "hit": 5,
+      "imageUrl": "https://www.cardgame-tokens.com/wp-content/uploads/2019/06/artprint-green-elf-signed.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Korkon",
+      "created_by": "1",
+      "health": 2,
+      "hit": 24,
+      "imageUrl": "https://paintbynumberscanvas.com/wp-content/uploads/2021/10/dwarf-warrior-lady-paint-by-number.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Floopi",
+      "created_by": "0",
+      "health": 5,
+      "hit": 5,
+      "imageUrl": "https://cdnb.artstation.com/p/assets/images/images/017/158/865/medium/alexandrine-simard-catwarrior.jpg?1554859245"
+    }
+  ]
+}
