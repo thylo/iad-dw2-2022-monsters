@@ -12,7 +12,7 @@ function Home() {
                     <Link to={"/game"}>Start the game</Link>
                 </button>
                 <button onClick={(e) => e.preventDefault()}>
-                    <Link to={"/monsters"}>Manage my characters</Link>
+                    <Link to={"/list"}>Manage my characters</Link>
                 </button>
             </div>
         </div>

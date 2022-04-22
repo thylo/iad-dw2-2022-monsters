@@ -51,7 +51,7 @@ const Monsters = ({ navToScene }) => {
               <MonsterCard
                 monster={m}
                 onClick={() => {
-                  navigateToPage(m.id.toString());
+                  navigateToPage(`monsters/${m.id.toString()}`);
                 }}
               />
             </li>
@@ -59,8 +59,6 @@ const Monsters = ({ navToScene }) => {
         })}
       </ul>
       <Outlet />
-      {/*<SideMonster monster={selectedMonster} setSelectedMonster={setSelectedMonster} setSelectedUser={setSelectedUser}/>
-            <SideUser created_by={selectedUser} setSelectedUser={setSelectedUser}/>*/}
     </div>
   );
 };

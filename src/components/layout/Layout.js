@@ -7,7 +7,7 @@ function Layout(props) {
             <nav className="c-nav">
                 <Link to={"/"}>Home</Link>
                 <Link to={"/game"}>Game</Link>
-                <Link to={"/monsters"}>Characters</Link>
+                <Link to={"/list"}>Characters</Link>
             </nav>
             <div>
                 <Outlet/>

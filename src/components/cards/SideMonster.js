@@ -21,7 +21,7 @@ const SideMonster = () => {
 
     return (
         <div className="c-side-window" style={{"--bgImg": `url(${imageUrl})`}}>
-            <button onClick={()=>navigate("/monsters")}>Close</button>
+            <button onClick={()=>navigate("/list")}>Close</button>
             <MonsterCard monster={monster}/>
         </div>
     );
