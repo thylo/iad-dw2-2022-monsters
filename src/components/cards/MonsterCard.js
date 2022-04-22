@@ -14,8 +14,8 @@ const MonsterCard = ({monster, onClick}) => {
 
             <div className="c-monster-card__img"/>
             <div className="c-monster-card__stats c-monster-card-stats">
-                <Stat stat={hit} name="Hit"/>
-                <Stat stat={health} name="Health"/>
+                <Stat stat={hit} name="ATK"/>
+                <Stat stat={health} name="HPs"/>
                 {/*<Stat stat={creator.name} name="Created by" invert={true}/>*/}
             </div>
         </div>

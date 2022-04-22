@@ -6,12 +6,13 @@ import {Outlet, useNavigate} from "react-router-dom";
 const fetchMonsters = async () => {
     return axios.get("http://localhost:8080/monsters")
 }
-const Monsters = ({navToScene}) => {
 
+const Monsters = () => {
+    
     const [isLoading, setIsLoading] = useState(true);
     const [monsters, setMonsters] = useState(null);
     const [error, setError] = useState(null);
-    const navigateToPage = useNavigate();
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetchMonsters().then(response => {
@@ -21,7 +22,7 @@ const Monsters = ({navToScene}) => {
         }).catch(e => {
             setIsLoading(false);
             setError("Error");
-        })
+        });
     }, [])
 
     if (isLoading) {
@@ -42,7 +43,7 @@ const Monsters = ({navToScene}) => {
                     return (
                         <li key={m.id} className="c-monster-grid__item" style={{"--bgImg": `url(${m.imageUrl})`}}>
                             <MonsterCard monster={m} onClick={() => {
-                                navigateToPage(m.id.toString());
+                                navigate(`monster/${m.id.toString()}`);
                             }}/>
                         </li>
                     )

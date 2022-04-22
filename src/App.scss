@@ -31,6 +31,10 @@ html, body {
   list-style: none;
   gap: 2rem;
   padding: 0;
+  
+  &--vertical {
+    grid-template-columns: 1fr;
+  }
 }
 
 .c-monster-card {

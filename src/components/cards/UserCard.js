@@ -1,6 +1,7 @@
 ﻿import clsx from "clsx";
 import React, {useEffect, useState} from "react";
 import axios from "axios";
+import {useNavigate} from "react-router-dom";
 
 const fetchUser = async (id) => {
     return axios.get(`http://localhost:8080/users/${id}`)
@@ -11,6 +12,7 @@ const UserCard = ({userId}) => {
     const [isLoading, setIsLoading] = useState(true);
     const [user, setUser] = useState(null);
     const [error, setError] = useState(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetchUser(userId).then(response => {
@@ -35,6 +37,7 @@ const UserCard = ({userId}) => {
             <span className="c-monster-card-stats__label">Creator: </span>
             <button onClick={(e) => {
                 e.stopPropagation();
+                navigate(`/monsters/user/${userId}`);
             }}
                     className="c-monster-card-stats__amount">{user.name}</button>
         </div>

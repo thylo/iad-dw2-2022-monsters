@@ -1,6 +1,6 @@
 ﻿import MonsterCard from "./MonsterCard";
 import React, {useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import axios from "axios";
 
 const fetchMonster = (monsterId) => {
@@ -8,7 +8,7 @@ const fetchMonster = (monsterId) => {
 }
 
 const SideMonster = () => {
-
+    const navigate = useNavigate();
     const {monsterId} = useParams();
     const [monster, setMonster] = useState();
     useEffect(() => {
@@ -20,7 +20,8 @@ const SideMonster = () => {
 
     return (
         <div className="c-side-window" style={{"--bgImg": `url(${imageUrl})`}}>
-            <button>Close</button>
+            <button onClick={() => navigate("/monsters")}>Close
+            </button>
             <MonsterCard monster={monster}/>
         </div>
     );

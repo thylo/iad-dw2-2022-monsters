@@ -1,5 +1,4 @@
 import './App.scss';
-import {useState} from "react";
 
 import Home from "./components/pages/Home";
 import Game from "./components/pages/Game";
@@ -7,6 +6,7 @@ import Monsters from "./components/pages/Monsters";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout"
 import SideMonster from "./components/cards/SideMonster";
+import SideUser from "./components/cards/SideUser";
 
 function App() {
     return (
@@ -15,7 +15,8 @@ function App() {
                 <Route path="/" element={<Home/>}/>
                 <Route path="game" element={<Game/>}/>
                 <Route path="monsters" element={<Monsters/>}>
-                    <Route path=":monsterId" element={<SideMonster/>}/>
+                    <Route path="monster/:monsterId" element={<SideMonster/>}/>
+                    <Route path="user/:userId" element={<SideUser/>}/>
                 </Route>
             </Route>
         </Routes>
