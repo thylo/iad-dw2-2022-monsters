@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout"
 import SideMonster from "./components/cards/SideMonster";
 import SideUser from "./components/cards/SideUser";
+import Create from "./components/pages/Create";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
             <Route path="/" element={<Layout/>}>
                 <Route path="/" element={<Home/>}/>
                 <Route path="game" element={<Game/>}/>
+                <Route path="create" element={<Create/>}/>
                 <Route path="monsters" element={<Monsters/>}>
                     <Route path="monster/:monsterId" element={<SideMonster/>}/>
                     <Route path="user/:userId" element={<SideUser/>}/>
