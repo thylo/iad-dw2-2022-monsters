@@ -3,6 +3,7 @@ import './App.scss';
 import Home from "./components/pages/Home";
 import Game from "./components/pages/Game";
 import Monsters from "./components/pages/Monsters";
+import CreateMonsterForm from "./components/forms/CreateMonsterForm";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout"
 import SideMonster from "./components/cards/SideMonster";
@@ -18,7 +19,9 @@ function App() {
                 <Route path="list" element={<Monsters/>}>
                     <Route path="monsters/:monsterId" element={<SideMonster/>}/>
                     <Route path="users/:userId" element={<SideUser/>}/>
+                    
                 </Route>
+                <Route path="create" element={<CreateMonsterForm />} />
             </Route>
         </Routes>
     )
